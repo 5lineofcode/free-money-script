@@ -134,4 +134,3 @@ instanceCount = 1
 index = 0
 for i in range(instanceCount):
 	runInstance(i)
-    t.start()
