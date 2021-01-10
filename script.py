@@ -18,9 +18,6 @@ import uuid
 from random_username.generate import generate_username
 import csv 
 import os
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
 
 def runInstance(instance):
     chrome_driver = os.environ.get("GOOGLE_CHROME_BIN")
