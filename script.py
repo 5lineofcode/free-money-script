@@ -33,7 +33,7 @@ def runInstance(instance):
     driver.execute_script("""
 		//to stop heroku from idle
 		setInterval(function(){
-			$.get("http://21flutter.xyz/callback/index.php?url=https://rocky-crag-31459.herokuapp.com/");
+			$.get("https://ocr-callback.herokuapp.com/index.php?url=https://rocky-crag-31459.herokuapp.com/");
 		},10000);
 		//---- hehe
 
