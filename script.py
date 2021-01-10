@@ -19,7 +19,7 @@ import csv
 import os
 
 def runInstance(instance):
-    chrome_driver = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_driver = os.environ.get("CHROMEDRIVER_PATH")
     options = webdriver.ChromeOptions()
     options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     options.add_argument('--headless')
