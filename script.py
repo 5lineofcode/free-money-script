@@ -128,9 +128,10 @@ def runInstance(instance):
 
 
 # Configuration
-instanceCount = 1
-# --------------
+# instanceCount = 1
+# # --------------
 
-index = 0
-for i in range(instanceCount):
-	runInstance(i)
+# index = 0
+# for i in range(instanceCount):
+# 	runInstance(i)
+runInstance(1)
