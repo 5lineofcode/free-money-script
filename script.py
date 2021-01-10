@@ -22,14 +22,9 @@ def runInstance(instance):
     chrome_driver = os.environ.get("GOOGLE_CHROME_BIN")
     options = webdriver.ChromeOptions()
     options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-
-    # options.add_argument('headless')
-    # options.add_argument('window-size=1920x1080')
-    # options.add_argument("disable-gpu")
-
-	options.add_argument('--headless')
-	options.add_argument('--disable-dev-shm-usage')
-	options.add_argument('--no-sandbox')
+    options.add_argument('--headless')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--no-sandbox')
 
     driver = webdriver.Chrome(
         executable_path=chrome_driver, options=options)
