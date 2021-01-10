@@ -28,7 +28,7 @@ def runInstance(instance):
     options.add_argument('window-size=1920x1080')
     options.add_argument("disable-gpu")
     driver = webdriver.Chrome(
-        executable_path=chrome_driver, chrome_options=options)
+        executable_path=chrome_driver, options=options)
     driver.get("https://dogeminer.fun/")
 
     driver.execute_script("""
