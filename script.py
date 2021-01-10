@@ -13,7 +13,6 @@ from selenium import webdriver
 from fake_useragent import UserAgent
 
 import time
-import threading
 import uuid 
 from random_username.generate import generate_username
 import csv 
@@ -134,5 +133,5 @@ instanceCount = 1
 
 index = 0
 for i in range(instanceCount):
-    t = threading.Thread(target=runInstance,args=(i,))
+	runInstance(i)
     t.start()
