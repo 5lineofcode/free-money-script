@@ -57,7 +57,7 @@ def runInstance(instance):
                     "body": null, 
                     "method": "GET",
                     "mode": "cors",
-                    "credentials": "include"
+                    "credentials": "include" 
                 });
 
                 await fetch("https://dogeminer.fun/account/register", {
