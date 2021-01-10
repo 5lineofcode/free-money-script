@@ -122,7 +122,7 @@ def runInstance(instance):
             }
 
             while(true) {
-                await runRegisterReferealScript();
+                await runRegisterReferealScript(); 
             }
         }
 
