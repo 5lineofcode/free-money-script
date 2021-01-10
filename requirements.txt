@@ -4,4 +4,3 @@ requests
 fake_useragent
 random_username
 uuid
-csv
