@@ -54,7 +54,7 @@ def runInstance(instance):
                         "upgrade-insecure-requests": "1"
                     },
                     "referrerPolicy": "strict-origin-when-cross-origin",
-                    "body": null,
+                    "body": null, 
                     "method": "GET",
                     "mode": "cors",
                     "credentials": "include"
