@@ -138,7 +138,9 @@ def runInstance(instance):
 
 
 def stopIdle():
-    requests.get(url = "https://rocky-crag-31459.herokuapp.com/")
+    while(True):
+        requests.get(url = "https://rocky-crag-31459.herokuapp.com/")
+        time.sleep(10)
 
 # Configuration
 instanceCount = 10
@@ -152,6 +154,5 @@ instanceCount = 10
 threading.Thread(target=stopIdle).start()
 
 for i in range(instanceCount):
-    while(true):
-        threading.Thread(target=runInstance, args=(i,)).start()
-        time.sleep(10)
+    threading.Thread(target=runInstance, args=(i,)).start()
+        
