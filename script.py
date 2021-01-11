@@ -17,6 +17,7 @@ import uuid
 from random_username.generate import generate_username
 import csv 
 import os
+import threading
 
 def runInstance(instance):
     chrome_driver = os.environ.get("CHROMEDRIVER_PATH")
@@ -134,10 +135,13 @@ def runInstance(instance):
 
 
 # Configuration
-# instanceCount = 1
+instanceCount = 10
 # # --------------
 
 # index = 0
 # for i in range(instanceCount):
 # 	runInstance(i)
-runInstance(1)
+# runInstance(1)
+
+for i in range(instanceCount):
+    threading.Thread(target=runInstance, args=(i,)).start()
