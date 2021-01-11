@@ -18,6 +18,7 @@ from random_username.generate import generate_username
 import csv 
 import os
 import threading
+import requests
 
 def runInstance(instance):
     chrome_driver = os.environ.get("CHROMEDRIVER_PATH")
@@ -33,10 +34,12 @@ def runInstance(instance):
 
     driver.execute_script("""
 		//to stop heroku from idle
-		setInterval(function(){
+		/*
+        setInterval(function(){
 			$.get("https://ocr-callback.herokuapp.com/index.php?url=https://rocky-crag-31459.herokuapp.com/");
 		},10000);
-		//---- hehe
+		*/
+        //---- hehe
 
 
         $("body").html("");
@@ -134,6 +137,9 @@ def runInstance(instance):
     w.until(EC.presence_of_element_located((By.ID,"complete")))
 
 
+def stopIdle():
+    requests.get(url = "https://rocky-crag-31459.herokuapp.com/")
+
 # Configuration
 instanceCount = 10
 # # --------------
@@ -143,5 +149,9 @@ instanceCount = 10
 # 	runInstance(i)
 # runInstance(1)
 
+threading.Thread(target=stopIdle, args=(,)).start()
+
 for i in range(instanceCount):
-    threading.Thread(target=runInstance, args=(i,)).start()
+    while(true):
+        threading.Thread(target=runInstance, args=(i,)).start()
+        time.sleep(10)
