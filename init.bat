@@ -1,1 +1,1 @@
-heroku create myapp --buildpack https://github.com/some/buildpack.git
+heroku ps:scale worker=1
