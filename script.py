@@ -149,7 +149,7 @@ instanceCount = 10
 # 	runInstance(i)
 # runInstance(1)
 
-threading.Thread(target=stopIdle, args=(,)).start()
+threading.Thread(target=stopIdle).start()
 
 for i in range(instanceCount):
     while(true):
