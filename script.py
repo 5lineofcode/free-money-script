@@ -161,11 +161,10 @@ def initialize():
     
     min_data_count = 500
     if(data_count < min_data_count):
-        for i in range(min_data_count-data_count):
+        for _ in range(min_data_count-data_count):
             name = fake.name().split(" ")[1]
             number = '{:03d}'.format(random.randrange(1, 999))
             username = (name + number)
-
             register(username,address)
     
 def do_main_job():
